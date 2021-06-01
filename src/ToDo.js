@@ -5,13 +5,15 @@ const ToDo = ({ todo, handleToggle }) => {
         e.preventDefault()
         handleToggle(e.currentTarget.id)
     }
+    console.log(todo)
     return (
         <div
             id={todo.id}
             key={todo.id + todo.task}
-            name="todo" value={todo.id}
+            name="todo" 
+            value={todo.id}
             onClick={handleClick}
-            className={todo.comlete ? "todo strike" : "todo"}
+            className={todo.complete ? "todo strike" : "todo"}
         >
             {todo.task}
         </div>
